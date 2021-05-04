@@ -1,0 +1,221 @@
+html,
+body {
+	font-family: "Roboto", sans-serif;
+	margin: 0;
+	height: 100%;
+	background-color: rgb(240, 240, 240);
+}
+
+.homepage-nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: white;
+	height: 86px;
+}
+
+.homepage-nav button {
+	padding: 15px 30px;
+	border-radius: 50px;
+	border: none;
+	background-color: rgb(55, 186, 247);
+	font-weight: 600;
+	letter-spacing: 2px;
+	font-size: 0.8rem;
+	text-transform: uppercase;
+	color: white;
+	cursor: pointer;
+	margin-right: 20px;
+}
+
+.homepage-nav button:focus,
+.homepage-nav button:hover {
+	outline: none;
+	background-color: rgb(55, 154, 247);
+}
+
+.homepage-nav a:nth-of-type(2) {
+	outline: none;
+}
+
+.nav-name {
+	padding-left: 20px;
+	font-size: 1.5em;
+	font-weight: 100;
+	text-decoration: none;
+	color: black;
+}
+
+.nav-name:focus {
+	outline: none;
+}
+
+.nav-links {
+	display: flex;
+	padding-right: 100px;
+}
+
+.nav-links li {
+	list-style-type: none;
+	padding-right: 20px;
+}
+
+.nav-links li a {
+	letter-spacing: 0.2em;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 0.8em;
+	font-weight: 500;
+	padding-bottom: 5px;
+	transition: border-width 2s linear;
+	color: black;
+}
+
+.nav-links li a::after {
+	content: "";
+	width: 0;
+	margin-top: 2px;
+	transition: width ease-in 0.3s;
+	background: black;
+	height: 1px;
+	display: block;
+}
+
+.nav-links li a:hover::after {
+	width: 100%;
+}
+
+.nav-links li a:focus {
+	outline: none;
+}
+
+.nav-links li a:focus::after {
+	outline: none;
+	width: 100%;
+}
+
+header {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}
+
+
+
+.header_h1 {
+	font-weight: 300;
+	font-size: 2.8em;
+}
+
+header > section {
+	background-color: rgb(255, 255, 255);
+	padding: 20px;
+	box-shadow: 0.3px 0.3px 15px rgb(71, 71, 71);
+	width: auto;
+	border-radius: 10px;
+}
+
+.register-input {
+	display: flex;
+	flex-direction: column;
+}
+
+.register-input input {
+	background-color: transparent;
+	border: none;
+	border-bottom: 1px solid black;
+	margin-bottom: 20px;
+	width: 500px;
+	font-size: 1.1rem;
+}
+
+input:focus {
+	outline: none;
+}
+
+.register-input label {
+	padding-bottom: 10px;
+	font-weight: 500;
+	font-size: 1.2rem;
+}
+
+.section-buttons {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+
+section button {
+	padding: 15px 30px;
+	border-radius: 50px;
+	border: none;
+	background-color: rgb(255, 105, 78);
+	font-weight: 600;
+	letter-spacing: 2px;
+	font-size: 0.8rem;
+	text-transform: uppercase;
+	color: white;
+	cursor: pointer;
+	margin-top: 20px;
+}
+
+section button:hover,
+section button:focus {
+	background-color: rgb(223, 77, 51);
+}
+
+.section-buttons a {
+	color: rgb(0, 0, 0);
+	margin: 0;
+	pointer-events: none;
+	cursor: text;
+	text-decoration: none;
+}
+
+.curved_arrow {
+	position: relative;
+	bottom: 110px;
+	left: 1%;
+	transform: rotate(10deg);
+}
+
+@media screen and (max-width: 1352px) {
+	.curved_arrow {
+		visibility: hidden;
+		width: 0px;
+	}
+
+	header > section {
+		margin-left: 0;
+	}
+
+	header {
+		flex-direction: column;
+	}
+
+	.section-buttons a {
+		pointer-events: visible;
+		cursor: pointer;
+		text-decoration: underline;
+		color: rgb(42, 42, 235);
+	}
+}
+
+@media screen and (min-width: 1570px) {
+	.curved_arrow {
+		transform: rotate(20deg);
+		left: 100px;
+	}
+}
+
+@media screen and (min-width: 1630px) {
+	.curved_arrow {
+		transform: rotate(25deg);
+	}
+}
+@media screen and (min-width: 1680px) {
+	.curved_arrow {
+		transform: rotate(30deg);
+	}
+}

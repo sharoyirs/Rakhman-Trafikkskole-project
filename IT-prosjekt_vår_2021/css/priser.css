@@ -1,0 +1,174 @@
+html,
+body {
+	font-family: "Roboto", sans-serif;
+	margin: 0;
+	height: 100%;
+	background-color: rgb(240, 240, 240);
+}
+
+.homepage-nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: white;
+	height: 86px;
+}
+
+.homepage-nav button {
+	padding: 15px 30px;
+	border-radius: 50px;
+	border: none;
+	background-color: rgb(55, 186, 247);
+	font-weight: 600;
+	letter-spacing: 2px;
+	font-size: 0.8rem;
+	text-transform: uppercase;
+	color: white;
+	cursor: pointer;
+	margin-right: 20px;
+}
+
+.homepage-nav button:focus,
+.homepage-nav button:hover {
+	outline: none;
+	background-color: rgb(55, 154, 247);
+}
+
+.homepage-nav a:nth-of-type(2) {
+	outline: none;
+}
+
+.nav-name {
+	padding-left: 20px;
+	font-size: 1.5em;
+	font-weight: 100;
+	text-decoration: none;
+	color: black;
+}
+
+.nav-name:focus {
+	outline: none;
+}
+
+.nav-links {
+	display: flex;
+	padding-right: 100px;
+}
+
+.nav-links li {
+	list-style-type: none;
+	padding-right: 20px;
+}
+
+.nav-links li a {
+	letter-spacing: 0.2em;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 0.8em;
+	font-weight: 500;
+	padding-bottom: 5px;
+	transition: border-width 2s linear;
+	color: black;
+}
+
+.nav-links li a::after {
+	content: "";
+	width: 0;
+	margin-top: 2px;
+	transition: width ease-in 0.3s;
+	background: black;
+	height: 1px;
+	display: block;
+}
+
+.nav-links li a:hover::after {
+	width: 100%;
+}
+
+.nav-links li a:focus {
+	outline: none;
+}
+
+.nav-links li a:focus::after {
+	outline: none;
+	width: 100%;
+}
+
+header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+header > h1 {
+	font-size: 2.8em;
+	font-weight: 300;
+}
+
+.pakker {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-self: flex-start;
+	width: 100%;
+}
+
+.klasse-b {
+	background-color: rgb(255, 255, 255);
+	align-self: flex-start;
+	width: 29%;
+	padding: 10px;
+	border-radius: 10px;
+	margin-bottom: 20px;
+	margin-top: 20px;
+   box-shadow: 0.5px 0.5px 10px rgb(71, 71, 71);
+}
+
+
+.klasse-b h1 {
+	font-size: 2.3em;
+	font-weight: 500;
+   background-color: rgb(181, 193, 204);
+   color: white;
+   padding-left: 5px;
+   width: 50%;
+   border-radius: 10px;
+}
+
+.klasse-b h2 {
+	font-size: 1.5em;
+	font-weight: 400;
+	background-color: rgb(0, 66, 128);
+	color: white;
+	border-radius: 5px;
+	display: flex;
+	justify-content: center;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.klasse-b_timer {
+	padding: 5px;
+	border-radius: 10px;
+}
+
+.klasse-b_timer h4 {
+	font-size: 1.1rem;
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 1px solid black;
+}
+
+.klasse-b_timer:nth-of-type(1) {
+	margin-bottom: 10px;
+}
+
+@media screen and (max-width: 1000px) {
+	header {
+		justify-content: center;
+	}
+	.pakker {
+		flex-direction: column;
+		margin-left: 35%;
+	}
+}
